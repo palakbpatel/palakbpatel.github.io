@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 15px;
+      width: 100%;
+    }
+    a.experience-company-link {
+    color: #970a55;
+    text-decoration: none;
+    }
+    .project-img img{
+    width: 300; /* Adjust width as needed */
+    height: 210; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image fills the area properly */
+    transition: var(--transition-1);
+  }
+  </style>
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/pal.jpg" alt="PP" width="60" height="140">
+        </figure>
+        <div class="info-content">
+          <h6 class="name" title="Palak Patel">Palak  Patel</h6>
+          <p class="title">Software Engineer</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:pbp2022@nyu.edu" class="contact-link">pbp2022@nyu.edu</a>
+              <a href="mailto:palak7693@gmail.com" class="contact-link">palak7693@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12133522795" class="contact-link">+1 9808445577</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="1982-06-23">June 7, 1993</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>New York City, NY, USA</address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/palakbpatel" class="social-link" target="_blank">
+              <ion-icon class = "socials-icons" name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/palakbalmukundpatel/" class="social-link" target="_blank">
+              <ion-icon class = "socials-icons" name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="mailto:palak7693#gmail.com" class="social-link">
+              <ion-icon class="socials-icons" name="mail-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+      <!--
+        - #NAVBAR
+      -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Extra-Curricular</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            During my high-scool, I was tasked with creating a program for an armstrong number. Albeit in a small way, witnessing the desired output, gave me an immense joy. As I learned more, I discovered how computers and technology are a big part of everything we do, and it made me even more excited about computer science. This insatiable desire to learn more about technology made me pursue my undergraduation from Jawaharlal Nehru Engineering College, India.
+          </p>
+
+          <p>
+            After my undergraduate studies, I worked as a Software QA Engineer for a leading product-based company, TIBCO. Here, I worked on customer use cases for Delta, one of America's largest airlines. I was primarily responsible for developing and automating test cases for every software update that occurs in monthly product releases, thereby improving it's ground services like ticket booking, passenger and luggage tracking. This experience endowed me with industry skills in DevOps, Coding and Software Testing.
+          </p>
+
+          <p>
+            These set of learnings that I have had over the years in my corporate experience made me realize that past learning and performance data can be used to predict the behavior in the future. So, my interest in exploring the realm of AI/ML grew stronger. Consequently, I made the decision to pursue my Masters at New York University.
+          </p>
+
+  				<p>
+            After two wonderful years of my Master's journey, I'm excited to re-enter the tech world and continue my journey of learning, building intelligent systems, and making a positive difference in the world.</p><h4>I will be available to work full-time starting from June 2024.</h4>			
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">Interests</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg
+                " alt="design icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Learning new things</h4>
+                <p class="service-item-text">
+                  Eager learner, constantly seeking new knowledge and skills to enrich my journey.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/reiki.jpg" alt="reiki icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Reiki Practitioner</h4>
+                <p class="service-item-text">
+                  A Japanese form of healing people , restoring the balance of their mind and body.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/music.png" alt="music icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Listening to music</h4>
+                <p class="service-item-text">
+                  Finding solace in the soulful melodies.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/food.jpg" alt="food icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Big Time Foodie</h4>
+                <p class="service-item-text">
+                  Love exploring and cooking new cuisines.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        
+      </article>
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Bachelor of Technology in Computer Science & Engineering</h4>
+              <span>2011-2015 | Jawaharlal Nehru Engineering College, India</span>
+              <p class="timeline-text">
+                Relevant courses included Data Structures and Algorithms, Database Management and OOPs.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Master of Science in Computer Engineering</h4>
+              <span>2022-2024 | New York University, NYC</span>
+              <p class="timeline-text">
+                Relevant courses included Machine Learning, Big Data and Cloud Computing.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Graduate Assistant <a href="https://nyu.edu" class="experience-company-link" target="_blank">@NYU</a></h4>
+              <span>Feb 2023 - May 2024 | New York City, NY</span>
+              <p class="timeline-text">
+                Assisted students and professors in Computer Science lab with login issues and software issues.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Software Engineer, QA <a href="https://www.tibco.com/" class="experience-company-link" target="_blank">@TIBCO</a></h4>
+              <span>2017-2022 | Pune, India</span>
+              <p class="timeline-text">
+                Worked with one of the world’s leading airline company to build the digital stack for flight coordination and on ground services like ticket booking, passenger and luggage tracking.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Intern <a href="#" class="experience-company-link">@Winfostar Technology Pvt.Ltd</a></h4>
+              <span>Spring 2016 | Nashik, India</span>
+              <p class="timeline-text">
+                Worked with a team responsible for creating a Dental clinic app covering the end to end customer journey from appointment booking to payment transactions.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">My skills</h3>
+					<div class="grid-container">
+						<div class="logo"><img src="./assets/images/skills/swagger.png" alt=" " width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/sql.png" alt=" " width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/soap.png" alt=" " width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/sel.png" alt="" width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/python.png" alt="" width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/java.png" alt="" width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/postman.png" alt="" width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/js.png" alt="" width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/jira.png" alt="" width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/jenkin.png" alt="" width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/html.jpg" alt="" width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/docker.png" alt="" width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/css.png" alt="" width="80"></div>
+						<div class="logo"><img src="./assets/images/skills/aws.jpg" alt="" width="80"></div>
+					</div>
+				</section>
+      </article>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+        <section class="projects">
+          <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/palakbpatel/cloudcomputing" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/chatbot.jpg" alt="finance" loading="lazy">
+                </figure>
+                <h3 class="project-title">Dining Concierge Chatbot</h3>
+                <p class="project-category">Programmed a smart chatbot using AWS services to recommend 5 restaurants, given a set of preferences that you provide through conversation.</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/palakbpatel/SummarizeNow" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/summarize.png" alt="orizon" loading="lazy">
+                </figure>
+                <h3 class="project-title">SummarizeNow</h3>
+                <p class="project-category">Extracted important information from large amounts of text using T5 and BART model on the CNN Dataset.</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://github.com/palakbpatel/StockTradingSimulatorPlatform" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/stock.png" alt="fundo" loading="lazy">
+                </figure>
+                <h3 class="project-title">PLAYSTONKS</h3>
+                <p class="project-category">Created an Amazon Web Services (AWS) stock portfolio system that enables users to buy and sell stocks, keeps track of transaction history, summarizes financial news, and calculates and displays portfolio metrics.</p>
+              </a>
+            </li>
+
+            
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/palakbpatel/Smart-Photo-Album-All" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/smartphoto.png" alt="brawlhalla" loading="lazy">
+                </figure>
+                <h3 class="project-title">SmartPhoto Album</h3>
+                <p class="project-category">Implemented a photo album web application, that can be searched using natural language through text.</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://github.com/palakbpatel/NeuralImageCaption/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/neural.jpg" alt="dsm." loading="lazy">
+                </figure>
+                <h3 class="project-title">Neural Image Caption Generation with Visual Attention</h3>
+                <p class="project-category">Used an attention-based methodology for automatically creating captions for images using lickr8k, Flickr30k, and MS COCO datasets.</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="extracurricular">
+        <header>
+          <h2 class="h2 article-title">Extracurricular</h2>
+        </header>
+        <section class="blog-posts">
+          <ul class="blog-posts-list">
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/nyu.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <h3 class="h3 blog-item-title">New York University</h3>
+                  <p class="blog-text"><strong>1.</strong> Achieved a scholarship of $14500 at New York University (NYU).</p>
+                  <p class="blog-text"><strong>2.</strong> Worked as a Graduate Assistant at the CSE Department, installed software based on semester requirements, assisted with login and lab issues, and contributed to additional tasks as needed.</p>
+                  <p class="blog-text"><strong>3.</strong> Participated in the STEM Diversity Career Preparation Program (DCPP), honed career skills and readied myself for professional opportunities through employer-led workshops and site visits to companies such as Bloomberg, EY, Pitchbook and more!</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/dev.png" alt="Design digest #79" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <h3 class="h3 blog-item-title">Jawaharlal Nehru Engineering College</h3>
+                  <p class="blog-text"><strong>1.</strong> Appointed as a Training Placement coordinator for Tata Consultancy Services (TCS) company. Conducted and coordinated interview schedules of students for TCS Placement.</p>
+                  <p class="blog-text"><strong>2.</strong> Selected amongst 150 students to undertake the final year project :Raspberry Pi Device Based Multiple Servers under Persistent Company.</p>
+                  <p class="blog-text"><strong>3.</strong> Organized and led tech events for fellow students.</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/social.png" alt="Design digest #79" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <h3 class="h3 blog-item-title">Social Cause</h3>
+                  <p class="blog-text"><strong>1.</strong> Raised maximum funds for an Old Age Home in association with HelpAge India.</p>
+                  <p class="blog-text"><strong>2.</strong> Worked for a Rajni Datta Educational Trust, where I arranged for school bags for children who could not afford one.</p>
+                  <p class="blog-text"><strong>3.</strong> Have been an active blood donor throughout my adult life.</p>
+                  <p class="blog-text"><strong>4.</strong> I practice Reiki, a Japanese form of healing people by delivering energy to their body, restoring the balance of their mind and body.</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d81373.79740516821!2d-74.02663321766921!3d40.71643501246308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1713936384449!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="mailto:palak7693@gmail.com" method="post" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
