@@ -433,17 +433,30 @@ main {
 .contact-info address { font-style: normal; }
 
 .social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
-  padding-bottom: 4px;
-  padding-left: 7px;
+  justify-content: center; /* Center the icons */
+  gap: 10px; /* Space out the icons */
 }
 
-.social-item .social-link {
-  color: var(--light-gray-70);
-  font-size: 18px;
+.social-item {
+  /* You can adjust padding as needed for touch targets */
+  padding: 1px; /* Padding makes it easier to tap the icons */
+}
+
+.social-link {
+  display: inline-block;
+  text-align: center;
+  /* Ensure the icons have a minimum size for easy tapping */
+  min-width: 44px; /* Minimum recommended size for touch targets */
+  min-height: 44px; /* Minimum recommended size for touch targets */
+}
+
+.socials-icons {
+  font-size: 22px; /* Adjust the size of the icons */
+  vertical-align: middle;
 }
 
 
@@ -1575,7 +1588,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
 
+  .socials-icons {
+    font-size: 28px; /* Larger size for mobile */
+  }
 
+  .social-item {
+    padding: 10px; /* Slightly larger padding for mobile */
+  }
   /**
    * NAVBAR
    */
