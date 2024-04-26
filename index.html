@@ -6,14 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Palak Patel - Personal Portfolio</title>
-
+  
   <!--
     - favicon
   -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
+   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <!--
     - custom css link
   -->
@@ -39,9 +38,19 @@
     .project-img img{
     width: 300; /* Adjust width as needed */
     height: 210; /* Adjust height as needed */
-    object-fit: cover; /* Ensures the image fills the area properly */
+    object-fit: contain; /* Ensures the image fills the area properly */
     transition: var(--transition-1);
   }
+  .clients-item img {
+    width: 150px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    object-fit: contain; /* Ensures the image is scaled correctly within the given dimensions */
+    padding: 10px; /* Optional: Adds some space around the image */
+    background: #fff; /* Optional: Sets a white background */
+    border-radius: 5px; /* Optional: Rounds the corners of the image background */
+  }
+  
+
   </style>
 </head>
 
@@ -60,7 +69,7 @@
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
         <figure class="avatar-box">
-          <img src="./assets/images/pal.jpg" alt="PP" width="60" height="140">
+          <img src="./assets/images/pp.jpeg" alt="PP" width="60" height="150">
         </figure>
         <div class="info-content">
           <h6 class="name" title="Palak Patel">Palak  Patel</h6>
@@ -170,19 +179,16 @@
         </header>
         <section class="about-text">
           <p>
-            During my high-scool, I was tasked with creating a program for an armstrong number. Albeit in a small way, witnessing the desired output, gave me an immense joy. As I learned more, I discovered how computers and technology are a big part of everything we do, and it made me even more excited about computer science. This insatiable desire to learn more about technology made me pursue my undergraduation from Jawaharlal Nehru Engineering College, India.
+          Hi! Welcome to my Portfolio.
           </p>
 
           <p>
-            After my undergraduate studies, I worked as a Software QA Engineer for a leading product-based company, TIBCO. Here, I worked on customer use cases for Delta, one of America's largest airlines. I was primarily responsible for developing and automating test cases for every software update that occurs in monthly product releases, thereby improving it's ground services like ticket booking, passenger and luggage tracking. This experience endowed me with industry skills in DevOps, Coding and Software Testing.
+          I am Palak Patel, an Engineering student at New York University (NYU). With over five years of experience in software engineering, I have dedicated myself to  solving complex problems and making technology accessible and useful for everyone. My work with Delta Airlines focused on developing scalable solutions that enhanced daily interactions for millions of travelers, showcasing the powerful impact that a thoughtful software design can have on people's lives.          
           </p>
 
           <p>
-            These set of learnings that I have had over the years in my corporate experience made me realize that past learning and performance data can be used to predict the behavior in the future. So, my interest in exploring the realm of AI/ML grew stronger. Consequently, I made the decision to pursue my Masters at New York University.
-          </p>
-
-  				<p>
-            After two wonderful years of my Master's journey, I'm excited to re-enter the tech world and continue my journey of learning, building intelligent systems, and making a positive difference in the world.</p><h4>I will be available to work full-time starting from June 2024.</h4>			
+          Over the next few years, I desire to develop intelligent solutions for real-world challenges, with a long-term vision of advancing technology for humanity's benefit.
+         </p>
         </section>
 
         <section class="service">
@@ -235,7 +241,166 @@
             </li>
           </ul>
         </section>
-        
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/chris.png" alt="" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Christopher Ng</h4>
+                <h5 style="color:grey">Senior Lab Admin, NYU</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    It has been a pleasure working with Palak over the past year. She is detail oriented very responsive and makes sure tasks are fully completed. She also works well with others. I recommend having her on any team.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/amit.png" alt="" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Amit Patel</h4>
+                <h5 style="color:grey">Professor, NYU</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/shek.png" alt="" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Shekhar Pandey</h4>
+                <h5 style="color:grey">Student, NYU</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I had the pleasure of collaborating with Palak on machine learning projects, despite her being new to the field. She quickly learned new skills and applied them to solve real-world challenges. Her hardwork,eagerness to overcome obstacles, and continuous improvement distinguish her in any technological field.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/i.png" alt=" " width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Mi Guo</h4>
+                <h5 style="color:grey">Ex-Senior Manager, TIBCO</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Palak Patel is a dedicated and quick learner who has shown great skill and enthusiasm in her software projects at TIBCO Software. She tackles challenges effectively and is always eager to improve. I highly recommend Palak for her strong work ethic and commitment to any task she undertakes.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/anu.png" alt="" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Anuradha Giri</h4>
+                <h5 style="color:grey">Ex-Manager, TIBCO</h5>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Palak Patel is a passionate and reliable professional at TIBCO Software, known for her proactive approach and ability to solve complex problems effectively. She consistently goes beyond her duties, showing a deep commitment to her work and team. I highly recommend Palak for her exceptional work ethic and team spirit, confident she will excel in her future endeavors.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-2.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-modal-title>Mi Guo</h4>
+              <a href="https://www.linkedin.com/in/palakbalmukundpatel/details/recommendations/?detailScreenTabIndex=2" target="_blank">Link</a>
+              <div data-modal-text>
+                <p>
+                  Palak Patel is a dedicated and quick learner who has shown great skill and enthusiasm in her software projects at TIBCO Software. She tackles challenges effectively and is always eager to improve. I highly recommend Palak for her strong work ethic and commitment to any task she undertakes.
+                </p>
+              </div>
+            </div>
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/delta.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/citi.jpg" alt="client logo">
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
       </article>
       <!--
         - #RESUME
@@ -249,7 +414,8 @@
                   <i class="fa fa-paperclip resume-link"></i>
               </a>
           </h2>
-        </header>
+      </header>
+      
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box">
@@ -335,8 +501,8 @@
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
-        <section class="projects">
-          <ul class="project-list">
+        <section class="projects">        
+         <ul class="project-list">
             <li class="project-item  active" data-filter-item data-category="web development">
               <a href="https://github.com/palakbpatel/cloudcomputing" target="_blank">
                 <figure class="project-img">
@@ -401,7 +567,7 @@
                 <h3 class="project-title">Neural Image Caption Generation with Visual Attention</h3>
                 <p class="project-category">Used an attention-based methodology for automatically creating captions for images using lickr8k, Flickr30k, and MS COCO datasets.</p>
               </a>
-            </li>
+            </li>  
           </ul>
         </section>
       </article>
@@ -417,35 +583,30 @@
         <section class="blog-posts">
           <ul class="blog-posts-list">
             <li class="blog-post-item">
-              <a href="#">
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/nyu.jpg" alt="Design digest #79" loading="lazy">
+                  <img src="./assets/images/grad.png" alt="" loading="lazy">
                 </figure>
                 <div class="blog-content">
-                  <h3 class="h3 blog-item-title">New York University</h3>
+                  <h3 class="h3 blog-item-title">Graduate Activities</h3>
                   <p class="blog-text"><strong>1.</strong> Achieved a scholarship of $14500 at New York University (NYU).</p>
-                  <p class="blog-text"><strong>2.</strong> Worked as a Graduate Assistant at the CSE Department, installed software based on semester requirements, assisted with login and lab issues, and contributed to additional tasks as needed.</p>
+                  <p class="blog-text"><strong>2.</strong> Worked as a Graduate Assistant at the CSE Department, my responsibilities included installing software, troubleshooting login issues, and providing technical support to both students and professors. </p>
                   <p class="blog-text"><strong>3.</strong> Participated in the STEM Diversity Career Preparation Program (DCPP), honed career skills and readied myself for professional opportunities through employer-led workshops and site visits to companies such as Bloomberg, EY, Pitchbook and more!</p>
                 </div>
-              </a>
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
                 <figure class="blog-banner-box">
                   <img src="./assets/images/dev.png" alt="Design digest #79" loading="lazy">
                 </figure>
                 <div class="blog-content">
-                  <h3 class="h3 blog-item-title">Jawaharlal Nehru Engineering College</h3>
+                  <h3 class="h3 blog-item-title">UnderGraduate Activites</h3>
                   <p class="blog-text"><strong>1.</strong> Appointed as a Training Placement coordinator for Tata Consultancy Services (TCS) company. Conducted and coordinated interview schedules of students for TCS Placement.</p>
                   <p class="blog-text"><strong>2.</strong> Selected amongst 150 students to undertake the final year project :Raspberry Pi Device Based Multiple Servers under Persistent Company.</p>
                   <p class="blog-text"><strong>3.</strong> Organized and led tech events for fellow students.</p>
                 </div>
-              </a>
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
                 <figure class="blog-banner-box">
                   <img src="./assets/images/social.png" alt="Design digest #79" loading="lazy">
                 </figure>
@@ -456,7 +617,6 @@
                   <p class="blog-text"><strong>3.</strong> Have been an active blood donor throughout my adult life.</p>
                   <p class="blog-text"><strong>4.</strong> I practice Reiki, a Japanese form of healing people by delivering energy to their body, restoring the balance of their mind and body.</p>
                 </div>
-              </a>
             </li>
           </ul>
 

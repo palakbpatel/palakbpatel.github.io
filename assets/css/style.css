@@ -352,7 +352,7 @@ main {
 .info-content .title {
   color: var(--white-1);
   background: var(--onyx);
-  font-size: var(--fs-3);
+  font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
   padding: 3px 12px;
@@ -721,7 +721,7 @@ main {
 
 .modal-content p {
   color: var(--light-gray);
-  font-size: var(--fs-4);
+  font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
@@ -840,14 +840,9 @@ main {
  */
 
 .skills-title { margin-bottom: 20px; }
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px; /* Adjust the gap between logos */
-  width: 100%;
-}
 
 .skills-list { padding: 20px; }
+
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
 
@@ -963,7 +958,26 @@ main {
 
 .project-item > a { width: 100%; }
 
+.project-img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
 
+.project-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  transition: var(--transition-1);
+}
 
 .project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
 
@@ -991,6 +1005,12 @@ main {
 
 .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-1);
+}
 
 .project-item > a:hover img { transform: scale(1.1); }
 
@@ -998,7 +1018,7 @@ main {
 .project-category { margin-left: 10px; }
 
 .project-title {
-  color: var(--white-2);
+  color:  var(--vegas-gold);
   font-size: var(--fs-5);
   font-weight: var(--fw-400);
   text-transform: capitalize;
@@ -1046,15 +1066,15 @@ main {
 }
 
 .blog-banner-box {
-  width: 60vw;
-  height: auto;
+  width: 100%;
+  height: 200px;
   border-radius: 12px;
   overflow: hidden;
 }
 
 .blog-banner-box img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
 }
@@ -1099,18 +1119,6 @@ main {
   line-height: 1.6;
 }
 
-.h2 {
-  display: inline; /* Ensures the heading is inline with other content */
-  margin-right: 5px; /* Adds space between the text and the icon */
-}
-
-.resume-link {
-  vertical-align: middle; /* Aligns the icon vertically with the text */
-}
-.fa-paperclip {
-  font-size: 0.8em; /* Makes the icon smaller */
-  vertical-align: middle; /* Aligns the icon vertically with the text */
-}
 
 
 
@@ -1292,7 +1300,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .article-title {
-    font-weight: var(--fw-400);
+    font-weight: var(--fw-600);
     padding-bottom: 15px;
   }
 
