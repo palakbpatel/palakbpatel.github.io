@@ -321,9 +321,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
-  overflow: hidden;
-  transition: var(--transition-2);
+  transition: max-height 0.5s ease-out, opacity 0.5s ease;
 }
 
 .sidebar.active { max-height: 405px; }
@@ -393,13 +391,13 @@ main {
 
 .sidebar-info_more {
   opacity: 0;
-  visibility: hidden;
+  display: block;
   transition: var(--transition-2);
 }
 
 .sidebar.active .sidebar-info_more {
   opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 .contacts-list {
@@ -1554,13 +1552,13 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 768px screen
  */
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
 
   /**
    * REUSED STYLE
    */
 
-  .sidebar, article { width: 700px; }
+  .sidebar, .main-content,article { width: 100%; }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
@@ -1573,6 +1571,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
+    display:block;
   }
 
 
