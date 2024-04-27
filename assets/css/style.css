@@ -179,7 +179,7 @@ article {
   width: 100%;
   height: 1px;
   background: var(--jet);
-  margin: 16px 0;
+  margin: 5px 0;
 }
 
 .icon-box {
@@ -1374,7 +1374,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .info_more-btn ion-icon { display: none; }
 
-  .separator { margin: 32px 0; }
+  .separator { margin: 20px 0; }
 
   .contacts-list { gap: 20px; }
 
