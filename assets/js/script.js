@@ -14,6 +14,16 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
+function myFunction() {
+  const sidebar = document.querySelector("[data-sidebar]");
+  elementToggleFunc(sidebar);
+  elementToggleFunc(sidebar);
+}
+
+window.onload = function() {
+  myFunction();
+}
+
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
